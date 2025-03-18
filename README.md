@@ -11,9 +11,41 @@ npx cap sync
 
 ## API
 
-<docgen-index></docgen-index>
+<docgen-index>
+
+* [`setKeepScreenAwake(...)`](#setkeepscreenawake)
+* [`getSettings()`](#getsettings)
+
+</docgen-index>
 
 <docgen-api>
-<!-- run docgen to generate docs from the source -->
-<!-- More info: https://github.com/ionic-team/capacitor-docgen -->
+<!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
+
+### setKeepScreenAwake(...)
+
+```typescript
+setKeepScreenAwake(options: { enable: boolean; }) => Promise<void>
+```
+
+Set whether to keep the screen awake while InAppBrowser is active
+
+| Param         | Type                              | Description                  |
+| ------------- | --------------------------------- | ---------------------------- |
+| **`options`** | <code>{ enable: boolean; }</code> | Options with enable property |
+
+--------------------
+
+
+### getSettings()
+
+```typescript
+getSettings() => Promise<{ keepScreenOn: boolean; }>
+```
+
+Get current settings of the WebView controller
+
+**Returns:** <code>Promise&lt;{ keepScreenOn: boolean; }&gt;</code>
+
+--------------------
+
 </docgen-api>
