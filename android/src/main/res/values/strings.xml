@@ -1,0 +1,4 @@
+<resources>
+    <string name="device_admin_label">YoSoftware App</string>
+    <string name="device_admin_description">Allow this app to enter kiosk mode without popups</string>
+</resources>

@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-public class WebViewDeviceAdminReciever extends DeviceAdminReceiver {
+public class WebViewDeviceAdminReceiver extends DeviceAdminReceiver {
     private static final String TAG = "WebViewDeviceAdmin";
 
     @Override

@@ -8,9 +8,30 @@ export class WebViewControllerWeb extends WebPlugin implements WebViewController
     return;
   }
 
-  async getSettings(): Promise<{ keepScreenOn: boolean }> {
+  async getSettings(): Promise<{ keepScreenOn: boolean; isDeviceOwner: boolean; lockTaskActive: boolean }> {
     console.warn('WebViewController.getSettings: This method is not available on web');
-    return { keepScreenOn: false };
+    return { keepScreenOn: false, isDeviceOwner: false, lockTaskActive: false };
   }
-  
+
+  async isDeviceOwner(): Promise<{ value: boolean }> {
+    console.warn('WebViewController.isDeviceOwner is not implemented on web');
+    return { value: false };
+  }
+
+  async setLockTaskPackages(): Promise<{ value: boolean }> {
+    console.warn('WebViewController.setLockTaskPackages is not implemented on web');
+    return { value: false };
+  }
+  async startLockTask(): Promise<{ value: boolean }> {
+    console.warn('WebViewController.startLockTask is not implemented on web');
+    return { value: false };
+  }
+  async stopLockTask(): Promise<{ value: boolean }> {
+    console.warn('WebViewController.stopLockTask is not implemented on web');
+    return { value: false };
+  }
+  async isLockTaskActive(): Promise<{ value: boolean }> {
+    console.warn('WebViewController.isLockTaskActive is not implemented on web');
+    return { value: false };
+  }
 }
