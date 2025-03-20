@@ -34,4 +34,8 @@ export class WebViewControllerWeb extends WebPlugin implements WebViewController
     console.warn('WebViewController.isLockTaskActive is not implemented on web');
     return { value: false };
   }
+  async clearDeviceOwner(_options: { confirm: boolean }): Promise<{ value: boolean; message: string }> {
+    console.warn('WebViewController.clearDeviceowner is not implemented on web');
+    return { value: false, message: 'false' };
+  }
 }

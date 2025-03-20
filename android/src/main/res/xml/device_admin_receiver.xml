@@ -2,12 +2,5 @@
     <uses-policies>
         <force-lock />
         <wipe-data />
-        <reset-password />
-        <limit-password />
-        <watch-login />
-        <set-global-proxy />
-        <expire-password />
-        <encrypted-storage />
-        <disable-camera />
     </uses-policies>
 </device-admin>

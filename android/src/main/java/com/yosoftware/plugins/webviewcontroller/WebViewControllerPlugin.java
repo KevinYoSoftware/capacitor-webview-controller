@@ -184,6 +184,31 @@ public class WebViewControllerPlugin extends Plugin {
             call.reject("Error checking Lock Task Mode status", e);
         }
     }
+    @PluginMethod
+    public void clearDeviceOwner(PluginCall call) {
+    try {
+        // Check if confirmation was provided
+        Boolean confirm = call.getBoolean("confirm", false);
+        
+        if (!confirm) {
+            call.reject("Confirmation required to clear device owner status. Set 'confirm' to true.");
+            return;
+        }
+        
+        boolean success = implementation.clearDeviceOwner();
+        if (success) {
+            JSObject result = new JSObject();
+            result.put("value", true);
+            result.put("message", "Device owner status successfully cleared");
+            call.resolve(result);
+        } else {
+            call.reject("Failed to clear device owner status. The app may not be a device owner.");
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+        call.reject("Error clearing device owner status", e);
+    }
+}
 
 
 

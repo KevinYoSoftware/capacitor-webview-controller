@@ -20,6 +20,7 @@ npx cap sync
 * [`startLockTask()`](#startlocktask)
 * [`stopLockTask()`](#stoplocktask)
 * [`isLockTaskActive()`](#islocktaskactive)
+* [`clearDeviceOwner(...)`](#cleardeviceowner)
 
 </docgen-index>
 
@@ -126,6 +127,21 @@ Check if Lock Task Mode is currently active.
 This can be used to determine the current kiosk state of the application.
 
 **Returns:** <code>Promise&lt;{ value: boolean; }&gt;</code>
+
+--------------------
+
+
+### clearDeviceOwner(...)
+
+```typescript
+clearDeviceOwner(options: { confirm: boolean; }) => Promise<{ value: boolean; message: string; }>
+```
+
+| Param         | Type                               |
+| ------------- | ---------------------------------- |
+| **`options`** | <code>{ confirm: boolean; }</code> |
+
+**Returns:** <code>Promise&lt;{ value: boolean; message: string; }&gt;</code>
 
 --------------------
 

@@ -66,4 +66,8 @@ export interface WebViewControllerPlugin {
    * @returns Promise that resolves with the current Lock Task Mode status
    */
   isLockTaskActive(): Promise<{ value: boolean }>;
+
+  clearDeviceOwner(options: { confirm: boolean }): Promise<{ value: boolean, message: string }>;
+
+
 }
