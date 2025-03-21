@@ -35,8 +35,8 @@ public class WebViewController {
         shouldKeepScreenOn = prefs.getBoolean("keepScreenOn", false);
 
         devicePolicyManager = (DevicePolicyManager) context.getSystemService(Context.DEVICE_POLICY_SERVICE);
-        adminComponentName = new ComponentName(context, WebViewDeviceAdminReceiver.class);
-
+        adminComponentName = new ComponentName(context, "com.yosoftware.yoapp.WebViewDeviceAdminReceiver");
+        
         if (devicePolicyManager != null) {
             isDeviceOwner = devicePolicyManager.isDeviceOwnerApp(context.getPackageName());
             Log.i(TAG, "App is device owner: " + isDeviceOwner);
